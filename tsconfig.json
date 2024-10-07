@@ -11,8 +11,9 @@
     "forceConsistentCasingInFileNames": true
   },
   "files": ["./src/env.d.ts"],
-  "include": ["src", "lib/**/*", "knexfile.ts"],
+  "include": ["src/**/*", "lib/**/*", "knexfile.ts"],
   "ts-node": {
-    "files": true
+    "files": true,
+    "swc": true
   }
 }

@@ -5,7 +5,10 @@
   "author": "Vinicius Prado <vinicavagna@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@swc/core": "^1.7.26",
+    "@swc/helpers": "^0.5.13",
     "@types/app-root-path": "^1.2.5",
+    "@types/bcryptjs": "^2.4.6",
     "@types/body-parser": "^1.19.2",
     "@types/cors": "^2.8.13",
     "@types/dotenv-safe": "^8.1.2",
@@ -23,6 +26,7 @@
     "jest": "29.6.2",
     "lint-staged": "^13.2.3",
     "prettier": "^3.0.0",
+    "regenerator-runtime": "^0.14.1",
     "supertest": "^6.3.3",
     "ts-jest": "^29.1.1",
     "ts-node": "^10.9.1",
@@ -33,6 +37,7 @@
   "dependencies": {
     "@types/supertest": "^2.0.12",
     "app-root-path": "^3.1.0",
+    "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
