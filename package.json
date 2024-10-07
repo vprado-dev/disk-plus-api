@@ -61,7 +61,7 @@
     "coverage": "jest --coverage && xdg-open ./coverage/lcov-report/index.html &>/dev/null",
     "test": "jest",
     "watch": "jest --watch",
-    "postbuild": "find build -iname \"*.js\" -exec yarn uglifyjs {} --rename --toplevel --comments '/^\\*/' --output {} \\;",
+    "postbuild": "find build -iname \"*.js\" -exec pnpm uglifyjs {} --rename --toplevel --comments '/^\\*/' --output {} \\;",
     "prebuild": "rm -rf build",
     "format": "prettier --write 'src/**/*'",
     "lint": "eslint --max-warnings=0 'src/**/*'",
