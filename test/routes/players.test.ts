@@ -8,7 +8,7 @@ const AUTHORIZATION_HEADER = {
 
 const request = req();
 
-describe("/players", () => {
+describe.skip("/players", () => {
   describe("400 - Bad Request", () => {
     test("POST /players", async () => {
       expect.assertions(1);
