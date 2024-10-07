@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "ESNext",
     "module": "CommonJS",
-    "rootDir": "src",
+    "rootDir": ".",
     "outDir": "build",
     "strict": true,
     "noImplicitReturns": true,
@@ -11,7 +11,7 @@
     "forceConsistentCasingInFileNames": true
   },
   "files": ["./src/env.d.ts"],
-  "include": ["src"],
+  "include": ["src", "lib/**/*", "knexfile.ts"],
   "ts-node": {
     "files": true
   }
