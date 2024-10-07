@@ -39,8 +39,10 @@
     "express": "^4.18.2",
     "joi": "^17.9.2",
     "jsonwebtoken": "^9.0.2",
+    "knex": "^3.1.0",
     "morgan": "^1.10.0",
     "openapi-comment-parser": "^1.0.0",
+    "pg": "^8.13.0",
     "swagger-ui-express": "^5.0.0",
     "yaml": "^2.3.1"
   },
@@ -56,7 +58,14 @@
     "postbuild": "find build -iname \"*.js\" -exec yarn uglifyjs {} --rename --toplevel --comments '/^\\*/' --output {} \\;",
     "prebuild": "rm -rf build",
     "format": "prettier --write 'src/**/*'",
-    "lint": "eslint --max-warnings=0 'src/**/*'"
+    "lint": "eslint --max-warnings=0 'src/**/*'",
+    "db:migrate-down": "knex --knexfile ./database/knexfile.js migrate:down",
+    "db:migrate-latest": "knex --knexfile ./database/knexfile.js migrate:latest",
+    "db:migrate-make": "knex --knexfile ./database/knexfile.js migrate:make",
+    "db:migrate-rollback": "knex --knexfile ./database/knexfile.js migrate:rollback",
+    "db:migrate-up": "knex --knexfile ./database/knexfile.js migrate:up",
+    "docker:up:dbs": "docker compose up -d disk-plus-api-postgres",
+    "docker:down:dbs": "docker compose down disk-plus-api-postgres"
   },
   "lint-staged": {
     "*.{js,ts,json}": [
